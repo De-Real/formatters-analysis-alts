@@ -1,0 +1,21 @@
+Formatter commands on react-check-format.js:
+prettier --write ./src/test-files/react-check-formatter.tsx
+yarn biome format --write ./src/test-files/react-check-formatter.tsx
+
+Migration:
+biome migrate prettier --write
+
+----------------
+Analysis tool commands on js-check-analysis.js:
+npx eslint ./src/test-files/js-check-analysis.js
+yarn biome check ./src/test-files/js-check-analysis.js
+oxlint ./src/test-files/js-check-analysis.js
+
+Analysis tool commands on react-check-analysis.tsx:
+npx eslint ./src/test-files/react-check-analysis.tsx
+yarn biome check ./src/test-files/react-check-analysis.tsx
+oxlint ./src/test-files/react-check-analysis.tsx
+
+Migration to Biome.js:
+biome migrate eslint --write
+
