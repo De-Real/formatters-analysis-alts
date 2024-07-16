@@ -1,0 +1,15 @@
+name: oxlint
+
+on:
+  workflow_dispatch:  # Allows manual triggering of the workflow
+
+jobs:
+  lint:
+    name: Lint JS
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Run oxlint
+        run: npx --yes oxlint@latest --deny-warnings # Using the latest release
